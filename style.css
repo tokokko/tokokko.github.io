@@ -1,3 +1,36 @@
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform:scale(1.05);
+  }
+  
+  100% {
+    transform:scale(1);
+  }
+}
+
+@keyframes delay-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  color: rgb(255, 145, 0);
+  animation: expand 1000ms ease-in-out infinite, delay-animation 6000ms linear infinite;
+}
+
+body {
+    background-color: #00ee88;
+}
+
 .tab {
   overflow: hidden;
   justify-content: center;
@@ -26,7 +59,9 @@ iframe {
 
 .tab button:hover {
   background-color: #ddd;
+  animation: expand 0.5s ease-in-out;
 }
+
 
 .tab button.active {
   background-color: #ffffff;
