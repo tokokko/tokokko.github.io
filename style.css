@@ -11,6 +11,26 @@
   }
 }
 
+/* Ensure the target letter acts as the coordinate anchor */
+.letter-anchor {
+  position: relative;
+  display: inline-block; /* Allows predictable positioning context */
+}
+
+/* Position the image relative to the letter */
+.anchored-image {
+  position: absolute;
+  
+  /* Adjust these values to place the image exactly where you want it */
+  bottom: 29px;       /* Places the image right above the letter */
+  left: 10px;          /* Centers the image horizontally relative to the letter */
+  
+  /* Prevent the image from breaking text selection or layout */
+  pointer-events: none; 
+  width: 150px;        /* Set your desired image size */
+  height: auto;
+}
+
 @keyframes expand-title {
   0% {
     transform: scale(1);
@@ -21,6 +41,10 @@
   20% {
     transform: scale(1);
   }
+}
+
+.title-image {
+  animation: expand-title 8s ease-in-out infinite;
 }
 
 h1 {
