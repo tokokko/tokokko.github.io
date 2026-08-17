@@ -18,8 +18,7 @@
 
 iframe {
     display: block;
-    width: 40%;
-    max-width: 1200px;
+    max-width: 600px;
     min-width: 200px;
     height: auto;
     aspect-ratio: 16 / 9;
@@ -38,10 +37,7 @@ iframe {
   display: none;
   padding: 6px 12px 52px 12px;
   border-top: none;
-  max-width: 1200px;
-  min-width: 100px;
-  justify-content: center;
-  align-items: center;
+  max-width: 600px;
 }
 
 .footer {
