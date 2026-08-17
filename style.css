@@ -11,11 +11,14 @@
   }
 }
 
-@keyframes delay-animation {
+@keyframes expand-title {
   0% {
     transform: scale(1);
   }
-  100% {
+  5% {
+    transform: scale(1.05);
+  }
+  20% {
     transform: scale(1);
   }
 }
@@ -24,7 +27,7 @@ h1 {
   font-size: 48px;
   text-align: center;
   color: rgb(255, 145, 0);
-  animation: expand 1000ms ease-in-out infinite, delay-animation 6000ms linear infinite;
+  animation: expand-title 8s ease-in-out infinite;
 }
 
 body {
