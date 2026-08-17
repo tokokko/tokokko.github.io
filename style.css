@@ -20,15 +20,10 @@ iframe {
     display: block;
     width: 40%;
     max-width: 1200px;
-    min-width: 400px;
+    min-width: 200px;
     height: auto;
     aspect-ratio: 16 / 9;
     margin: 0 auto;
-}
-
-p {
-    margin: 0 auto;
-    max-width: 60%; 
 }
 
 .tab button:hover {
@@ -44,7 +39,7 @@ p {
   padding: 6px 12px 52px 12px;
   border-top: none;
   max-width: 1200px;
-  min-width: 400px;
+  min-width: 200px;
   justify-content: center;
   align-items: center;
 }
