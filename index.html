@@ -1,9 +1,82 @@
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 <body bgcolor=#00ee66>
+  <center>
 <p>
-    <iframe
-        src="https://www.youtube.com/embed/Crwlhnf5vJ0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-    </iframe>
-<footer>(C) Tommi Kokko</footer>
+<h1 style="color:rgb(255, 145, 0)">VESILISKO-LIVE</h1>
+</p>
+ <br>
+   <div class="tab">
+     <button id ="default" class="tablinks" onclick="openTab(event, 'Vesiliskot')">Vesiliskot</button>
+     <button class="tablinks" onclick="openTab(event, 'Sudenkorennot')">Sudenkorennot</button>
+     <button class="tablinks" onclick="openTab(event, 'Lampi')">Lampi</button>
+    </div>
+<br>
+<div>
+  <iframe class = "iframe"
+    src="https://www.youtube.com/embed/Crwlhnf5vJ0" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div id="Vesiliskot" class="tabcontent">
+  <h3>Vesiliskot</h3>
+  <p>Er&auml;&auml;n&auml; p&auml;iv&auml;n&auml; lampea tutkiessani, huomasin jotain liikkuvan lammen pinnan alla. Mietin, ett&auml; miten lampeen on p&auml;&auml;ssyt kala?! Huusin vaimon paikalle ja hetken tutkimisen
+    j&auml;lkeen tuo vesien suurpeto n&auml;ytt&auml;ytyi ja selvisi, ett&auml; sill&auml;h&auml;n on jalat. Vesiliskot olivat ottaneet lammen omakseen. Lammen rannalla n&auml;kyy niiden poikasia, ulkonevin
+    kiduksin, kun tutkii kivi&auml; tarkkaan. 
+  </p>
+</div>
+
+<div id="Sudenkorennot" class="tabcontent">
+  <h3>Sudenkorennot</h3>
+  <p>Totesin joskus, ett&auml; lampi alkaa olla valmis, jos sen ymp&auml;rill&auml; py&ouml;rii sudenkorentoja. T&auml;n&auml; vuonna niit&auml; on n&auml;kynyt lentelem&auml;ss&auml; lammen ymp&auml;rill&auml; ja l&ouml;ysimme my&ouml;s kuoriutuneen
+    sudenkorennon kuoret.
+  </p> 
+</div>
+
+<div id="Lampi" class="tabcontent">
+  <h3>Lampi</h3>
+  <p>Lammen kaivaminen alkoi n. vuonna 2020. Kaivuuty&ouml; hoidettiin lihasvoimin ja pohja vuorattiin kivill&auml; useiden vuosien saatossa. 
+    Lammen ekosysteemi muodostui alkuun hitaasti ja lammesta erittyi l&auml;hinn&auml; voimakas m&auml;d&auml;n haju. Pikku hiljaa el&auml;m&auml; kuitenkin voitti ja 
+  lampeen alkoi muodostua el&auml;m&auml;&auml;, ensin vesimittareiden ja muiden pinnalla el&auml;vien otusten kautta. Hyttysten toukat olivat n&auml;kyviss&auml; jo ensimm&auml;isist&auml; vuosista
+  l&auml;htien. Pienet otukset tietysti houkutteli paikalle isompia ja nyt lammessa on tavattu sudenkorentoja ja jopa vesiliskoja! </p>
+</div>
+<script>
+openDefault();
+
+function openDefault() {
+  // Get all elements with class="tabcontent" and hide them
+  document.getElementById("Vesiliskot").style.display = "block";
+  document.getElementById("default").className  += " active";
+
+}
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+
+</script>
+</body>
+<div class="footer">(C) Tommi Kokko 2026</div>
+</html>
